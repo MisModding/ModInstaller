@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"licenser.projectName": "ModInstaller",
+		"licenser.author": "Theros <MisModding|SvalTek>",
+		"licenser.license": "GPLv3",
+		"Lua.runtime.version": "Lua 5.1",
+		"Lua.workspace.library": [
+			".lua.completions.d"
+		],
+		"Lua.workspace.ignoreDir": [
+			".git",
+			".github",
+			".vscode",
+			"**/.unprocessed"
+		],
+		"vscode-lua-format.configPath": "lua-format.cfg",
+		"busted-test-explorer.testfilepattern": "**/*_spec.lua",
+		"busted-test-explorer.executable": "F:/ProgramData/LUA/5.1.4/bin/busted.bat",
+		"busted-test-explorer.cwd": "${workspaceFolder}",
+		"busted-test-explorer.args": [
+			"--defer-print",
+		],
+	}
+}

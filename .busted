@@ -1,0 +1,10 @@
+return {
+	_all = {
+		output = "gTest",
+		Xoutput = '--color',
+		verbose = false,
+		ROOT = { 'spec' },
+		lpath = './Source/GameSDK/?.lua;./Source/GameSDK/?/init.lua'
+	},
+	CI = { output = "tap" },
+}
