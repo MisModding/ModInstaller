@@ -53,10 +53,8 @@ function ModInstaller:new(baseDirectory) end
 --- create a new mod
 ---@param modName string
 ---@param modVersion string
----@param modAuthor string
----@param modDescription string
 ---@return ModInstaller.Mod
-function ModInstaller:CreateMod(modName, modVersion, modAuthor, modDescription) end
+function ModInstaller:CreateMod(modName, modVersion) end
 
 --- Install Mod
 ---@param modName string Mod to install

@@ -62,7 +62,6 @@ end
 ---@class ModInstaller.Mod : MisModding.Class
 ---@field name          string              The name of the mod
 ---@field version       string              The version of the mod
----@field author        string              The author of the mod
 ---@field description   string              The description of the mod
 ---@field content ModInstaller.Content      The content of the mod
 local Mod = Class('ModInstaller.Mod', {})
@@ -70,19 +69,11 @@ local Mod = Class('ModInstaller.Mod', {})
 --- ModInstaller Mod constructor
 ---@param name string
 ---@param version string
----@param author string
----@param description? string
-function Mod:new(name, version, author, description)
+function Mod:new(name, version)
 	if assert_arg(1, name, 'string') then error('name must be a string', 2) end
 	self.name = name
-	if assert_arg(2, author, 'string') then error('author must be a string', 2) end
-	self.author = author and author or 'Unknown';
 	if assert_arg(3, version, 'string') then error('version must be a string', 2) end
-	self.version = version and version or '0.0.0';
-	if description then
-		if assert_arg(4, description, 'string') then error('description must be a string', 2) end
-		self.description = description
-	end
+	self.version = version
     self.content = Content(self.name, 'directory');
     -- has this mod been installed?
     self.installed = false;
