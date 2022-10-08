@@ -45,7 +45,7 @@ describe("ModInstaller", function()
 	end)
 
 	it("Create a new Mod", function()
-		MyMod = g_ModInstaller:CreateMod("TestMod", "1.0.0", "Theros", "Test Mod");
+		MyMod = g_ModInstaller:CreateMod("TestMod", "1.0.0");
 		assert.is_truthy(MyMod);
 		assert.is_equal(MyMod.name, "TestMod");
 		assert.is_equal(MyMod.version, "1.0.0");

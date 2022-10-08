@@ -78,16 +78,14 @@ end
 --- create a new mod
 ---@param modName string
 ---@param modVersion string
----@param modAuthor string
----@param modDescription string
 ---@return ModInstaller.Mod
-function ModInstaller:CreateMod(modName, modVersion, modAuthor, modDescription)
+function ModInstaller:CreateMod(modName, modVersion)
 	-- check if mod already exists
 	for _, mod in pairs(self.Mods) do
 		if mod.name == modName then error('Mod with name "' .. modName .. '" already exists!'); end
 	end
 	-- new mod
-	local mod = Mod(modName, modVersion, modAuthor, modDescription) ---@type ModInstaller.Mod
+	local mod = Mod(modName, modVersion) ---@type ModInstaller.Mod
 	self.Mods[modName] = mod;
 	return mod
 end
