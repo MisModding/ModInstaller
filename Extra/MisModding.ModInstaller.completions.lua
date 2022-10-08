@@ -21,6 +21,23 @@ local _M = {
 	_DESCRIPTION = "ModInstaller Completions for VSC sumneko.lua"
 }
 
+---@class ModInstaller.Content
+---@field path      string  The path to the content, relative to the mod's root directory
+---@field kind      string  The kind of content, e.g. `file` or `directory`
+---@field content   string|ModInstaller.Content  The content of the file or directory, this must be a string for files and an array of ModInstaller.Content for directories
+---@field AddFile        fun(self,path: string, content: string):any	Adds a file to the mod
+---@field AddDirectory   fun(self,path: string):ModInstaller.Content	Adds a directory to the mod
+local Content
+
+---@class ModInstaller.Mod
+---@field name          string              The name of the mod
+---@field version       string              The version of the mod
+---@field author        string              The author of the mod
+---@field description   string              The description of the mod
+---@field content ModInstaller.Content      The content of the mod
+---@field AddFile        fun(self,path: string, content: string):any	Adds a file to the mod
+---@field AddDirectory   fun(self,path: string):ModInstaller.Content	Adds a directory to the mod
+
 --- MisModding ModInstaller API
 ---@class MisModding.ModInstaller
 ---@field Mods ModInstaller.Mod[]	All Registered Mods
